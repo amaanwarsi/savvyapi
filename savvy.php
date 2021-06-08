@@ -14,7 +14,7 @@ curl_close($ch);
 return $data;
 }
 
-$url = $_GET["country"]?"https://newsapi.org/v2/top-headlines?country=".$_GET["country"]."&category=".$_GET["category"]."&apiKey=a61b3972d77b44bc8c1ff8103e478499":"https://newsapi.org/v2/top-headlines?category=".$_GET["category"]."&apiKey=a61b3972d77b44bc8c1ff8103e478499";
+$url = $_GET["country"]?"https://newsapi.org/v2/top-headlines?country=".$_GET["country"]."&category=".$_GET["category"]."&apiKey=".$_GET["api"]:"https://newsapi.org/v2/top-headlines?category=".$_GET["category"]."&apiKey=".$_GET["api"];
 
 $json = json_decode(curl_get_contents($url), true);
 
